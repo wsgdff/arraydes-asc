@@ -1,0 +1,21 @@
+
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+@TeleOp
+
+public class AYTest extends LinearOpMode {
+@Override
+public void runOpMode() {
+
+waitForStart();
+
+while (opModeIsActive()) {
+float x = this.gamepad1.left_stick_x * -1;
+float y = this.gamepad1.left_stick_y * -1;
+telemetry.addData("Status", "x:" + x + "y:"+ y);
+telemetry.update();
+
+
+}
+    }
+        }
